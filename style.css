@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+:root {
+  --color-principal: rgb(41, 165, 159);
+  --color-fundo: rgb(0, 104, 104);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  opacity: 80%;
+  align-items: center;
+  z-index: 3;
+}
+.imgnav img {
+  width: 60px;
+  height: 60px;
+  margin-left: 70%;
+}
+.textnav {
+  display: flex;
+  gap: 5em;
+  margin-right: 5%;
+}
+.textnav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.8s;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+}
+.textnav a:hover {
+  transform: scale(1.2);
+  color: var(--color-principal);
+}
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.typing-text {
+  color: var(--color-principal);
+}
+h1 {
+  font-size: 70px;
+  font-family: "Inter", sans-serif;
+}
+#piscar {
+  color: var(--color-principal);
+  opacity: 0;
+  animation: piscar 1s ease-in-out infinite;
+}
+@keyframes piscar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.titulos {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  margin-top: 60px;
+}
+ul {
+  list-style: none;
+}
+.princi {
+  margin-top: 30px;
+  width: 40%;
+  height: auto;
+  padding: 2%;
+  background-color: var(--color-fundo);
+  border-radius: 30px;
+  transition: 0.8s;
+}
+.princi:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 4px;
+}
+.tit {
+  font-size: 30px;
+}
+.parag {
+  font-size: 25px;
+}
+ul li {
+  text-align: left;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+#fim {
+  margin-bottom: 30px;
+}
+.ses {
+  color: gold;
+}
+.aqui a {
+  color: var(--color-principal);
+  text-decoration: underline;
+}
+.seguirs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  margin-bottom: 30px;
+}
+.palestrante {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-fundo);
+  width: 350px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.palestrante:hover {
+  transform: scale(1.1);
+  box-shadow: black 4px 4px 8px;
+}
+.palestrante img {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+#peppa {
+  font-size: 50px;
+}
+fieldset label {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+#bbp,
+.inpu {
+  width: 300px;
+  height: 40px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.pergunta {
+  margin-top: 30px;
+}
+.destaq {
+  color: var(--color-principal);
+}
+.tmjbb {
+  font-size: 20px;
+}
+.pilar {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.8s;
+  background-color: var(--color-fundo);
+  border-color: white;
+  color: white;
+}
+.pilar:hover {
+  transform: scale(1.1);
+}
+.butoes {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  align-items: center;
+  justify-content: center;
+}
+.sid {
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  border-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+@keyframes mostrar {
+  from {
+    margin-left: -100vh;
+  }
+  to {
+    margin-left: -10vh;
+  }
+}
+@keyframes esconder {
+  from {
+    margin-left: -10vh;
+  }
+  to {
+    margin-left: -100vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .seguirs {
+    flex-direction: column !important;
+  }
+  .sid {
+    display: block;
+  }
+  .textnav {
+    margin-top: 600px;
+    position: fixed !important;
+    width: 35vw;
+    margin-left: -100vw;
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    z-index: 100;
+    padding-left: 150px;
+    background-color: black;
+    transition: margin-left 0.5s ease-in-out;
+  }
+  .imgnav img {
+    margin-left: 0 !important;
+  }
+  #x {
+    margin: 50% 0% 0% 0% !important;
+    width: 25px;
+  }
+}

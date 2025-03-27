@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscreva-se</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="robotic-hand_9626716.png" type="s/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <button class="sid" onclick="sidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="imgnav">
+        <img src="robotic-hand_9626716.png" alt="Icone da TechConnect" />
+      </div>
+      <div class="textnav" id="textnav">
+        <button id="x" class="sid" onclick="sidebar()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html">Evento</a>
+        <a href="Palestrantes.html">Palestrantes</a>
+        <div class="aqui"><a href="Inscreverse.html">Inscreva-se</a></div>
+      </div>
+    </div>
+    <div class="conteudo">
+      <h1 id="peppa">
+        Preencha abaixo para <span class="destaq">se inscrever!</span>
+      </h1>
+      <form action="">
+        <fieldset>
+          <div class="pergunta">
+            <label for="Nome">Nome Completo(Obrigatório):</label><br />
+            <input class="inpu" type="text" name="Nome" id="Nome" required />
+          </div>
+          <br />
+          <div class="pergunta">
+            <label for="email">Email(Obrigatório):</label><br />
+            <input
+              class="inpu"
+              type="email"
+              name="Email"
+              id="Email"
+              required
+            /><br />
+          </div>
+          <div class="pergunta">
+            <label for="celular">Número de telefone:</label><br />
+            <input
+              type="text"
+              name="telefone"
+              id="bbp"
+              class="phone_with_ddd"
+            /><br />
+          </div>
+          <div class="pergunta">
+            <label for="ingresso">Tipo de Ingresso</label><br />
+            <input type="radio" name="Ingresso" id="Ingresso" />
+            <label for="Ingresso" class="tmjbb">Presencial</label>
+            <input type="radio" name="Ingresso" id="IngressoV" />
+            <label for="IngressoV" class="tmjbb">Online</label><br />
+          </div>
+          <div class="pergunta">
+            <label for="Termos">Você aceita os Termos?</label><br />
+            <input type="checkbox" name="Termos" id="Termos" />
+            <label for="Termos" class="tmjbb">Sim</label><br />
+          </div>
+          <div class="butoes">
+            <button class="pilar" onclick="window.location.href = 'Boa.html'">
+              Enviar
+            </button>
+            <button class="pilar">Limpar</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+      integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#bbp").mask("(00) 0000-0000");
+      });
+    </script>
+  </body>
+</html>
