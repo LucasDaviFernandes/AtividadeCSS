@@ -221,24 +221,27 @@ fieldset label {
   .sid {
     display: block;
   }
+  h1 {
+    font-size: 45px;
+  }
   .textnav {
-    margin-top: 600px;
     position: fixed !important;
-    width: 35vw;
+    width: 55vw;
     margin-left: -100vw;
+    align-items: center;
     display: flex;
     flex-direction: column;
     height: 130vh;
     z-index: 100;
-    padding-left: 150px;
     background-color: black;
+    top: 10px;
     transition: margin-left 0.5s ease-in-out;
   }
   .imgnav img {
     margin-left: 0 !important;
   }
   #x {
-    margin: 50% 0% 0% 0% !important;
+    margin: 5% 0% 0% 0% !important;
     width: 25px;
   }
 }
