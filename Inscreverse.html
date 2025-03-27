@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,7 +74,12 @@
             <label for="Termos" class="tmjbb">Sim</label><br />
           </div>
           <div class="butoes">
-            <button type="submit" class="pilar">Enviar</button>
+            <button
+              type="submit"
+              class="pilar""
+            >
+              Enviar
+            </button>
             <button type="reset" class="pilar">Limpar</button>
           </div>
         </fieldset>
@@ -92,18 +97,6 @@
       $(document).ready(function () {
         $("#bbp").mask("(00) 0000-0000");
       });
-
-      document
-        .getElementById("formular")
-        .addEventListener("submit", function (lkm) {
-          if (!this.checkValidity()) {
-            lkm.preventDefault();
-            alert("Preencha todos os dados");
-          } else {
-            lkm.preventDefault();
-            window.location.href = "Boa.html";
-          }
-        });
     </script>
   </body>
 </html>
