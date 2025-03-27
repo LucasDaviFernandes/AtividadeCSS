@@ -35,7 +35,7 @@
       <h1 id="peppa">
         Preencha abaixo para <span class="destaq">se inscrever!</span>
       </h1>
-      <form action="">
+      <form id="formular" action="">
         <fieldset>
           <div class="pergunta">
             <label for="Nome">Nome Completo(Obrigatório):</label><br />
@@ -74,10 +74,8 @@
             <label for="Termos" class="tmjbb">Sim</label><br />
           </div>
           <div class="butoes">
-            <button class="pilar" onclick="window.location.href = 'Boa.html'">
-              Enviar
-            </button>
-            <button class="pilar">Limpar</button>
+            <button type="submit" class="pilar">Enviar</button>
+            <button type="reset" class="pilar">Limpar</button>
           </div>
         </fieldset>
       </form>
@@ -94,6 +92,18 @@
       $(document).ready(function () {
         $("#bbp").mask("(00) 0000-0000");
       });
+
+      document
+        .getElementById("formular")
+        .addEventListener("submit", function (lkm) {
+          if (!this.checkValidity()) {
+            lkm.preventDefault();
+            alert("Preencha todos os dados");
+          } else {
+            lkm.preventDefault();
+            window.location.href = "Boa.html";
+          }
+        });
     </script>
   </body>
 </html>
