@@ -61,3 +61,13 @@ window.addEventListener("resize", function (event) {
     sidebar();
   }
 });
+
+document.getElementById("formular").addEventListener("submit", function (lkm) {
+  if (!this.checkValidity()) {
+    lkm.preventDefault();
+    alert("Preencha todos os dados");
+  } else {
+    lkm.preventDefault();
+    window.location.href = "Boa.html";
+  }
+});
